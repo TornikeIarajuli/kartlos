@@ -18,8 +18,8 @@
   flex-direction: column;
   flex-grow: 1;
   padding: 16px;
-  background-color: rgba(71, 65, 65, 0.2);
-  border: 1px solid #ccc;
+  background-color: rgba(71, 65, 65, 0.5);
+  /* border: 1px solid #ccc; */
   border-radius: 4px;
   text-align: center;
 }

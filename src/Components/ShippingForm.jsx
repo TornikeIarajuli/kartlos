@@ -3,16 +3,16 @@ import axios from "axios";
 import "./shipping.css";
 
 function ShippingForm(props) {
-  const [countryId, setCountryId] = useState(0);
+  // const [countryId, setCountryId] = useState(0);
   const [city, setCity] = useState("");
-  const [state, setState] = useState("");
+  // const [state, setState] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [address1, setAddress1] = useState("");
-  const [address2, setAddress2] = useState("");
+  // const [address2, setAddress2] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
-  const [postalCode, setPostalCode] = useState("");
+  // const [postalCode, setPostalCode] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,14 +21,14 @@ function ShippingForm(props) {
       addresInfo: {
         countryId: 1,
         city: city,
-        state: state,
+        state: "state",
         firstName: firstName,
         lastName: lastName,
         address1: address1,
-        address2: address2,
+        address2: "address2",
         phone: phone,
         email: email,
-        postalCode: postalCode,
+        postalCode: "postalCode",
       },
       orders: [
         {
@@ -85,13 +85,13 @@ function ShippingForm(props) {
           onChange={(e) => setAddress1(e.target.value)}
         />
 
-        <label htmlFor="address2">მეორე მისამართი:</label>
+        {/* <label htmlFor="address2">მეორე მისამართი:</label>
         <input
           type="text"
           id="address2"
           value={address2}
           onChange={(e) => setAddress2(e.target.value)}
-        />
+        /> */}
 
         <label htmlFor="city">ქალაქი:</label>
         <input
@@ -101,7 +101,7 @@ function ShippingForm(props) {
           onChange={(e) => setCity(e.target.value)}
         />
 
-        <label htmlFor="state">რეგიონი:</label>
+        {/* <label htmlFor="state">რეგიონი:</label>
         <input
           type="text"
           id="state"
@@ -115,15 +115,15 @@ function ShippingForm(props) {
           id="postalCode"
           value={postalCode}
           onChange={(e) => setPostalCode(e.target.value)}
-        />
+        /> */}
 
-        <label htmlFor="countryId">ქვეყანა:</label>
+        {/* <label htmlFor="countryId">ქვეყანა:</label>
         <input
           type="text"
           id="countryId"
           value={countryId}
           onChange={(e) => setCountryId(e.target.value)}
-        />
+        /> */}
 
         <label htmlFor="phone">ნომერი:</label>
         <input
