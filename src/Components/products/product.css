@@ -18,9 +18,16 @@
   flex-direction: column;
   flex-grow: 1;
   padding: 16px;
-  background-color: #fff;
+  background-color: rgba(71, 65, 65, 0.2);
   border: 1px solid #ccc;
   border-radius: 4px;
+  text-align: center;
+}
+
+p,
+h4,
+h6 {
+  color: white;
 }
 
 .product-title {
@@ -41,6 +48,7 @@
 
 .buy-btn {
   background-color: #007bff;
+  background-color: rgba(0, 123, 255, 0.3);
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -63,7 +71,6 @@
   justify-content: center;
   align-items: center;
 }
-
 
 @media (min-width: 768px) {
   .product-card {

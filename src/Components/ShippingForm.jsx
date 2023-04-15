@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import './shipping.css'
+import "./shipping.css";
 
 function ShippingForm(props) {
   const [countryId, setCountryId] = useState(0);
@@ -32,6 +32,7 @@ function ShippingForm(props) {
       },
       orders: [
         {
+          // TODO
           productId: 4,
           quantity: 1,
         },
@@ -140,10 +141,14 @@ function ShippingForm(props) {
           onChange={(e) => setEmail(e.target.value)}
         />
 
-        <button className="orderBtn" type="submit">შეკვეთა</button>
+        <button className="orderBtn" type="submit">
+          შეკვეთა
+        </button>
       </form>
 
-      <button className="closeBtn" onClick={handleExit}>დახურვა</button>
+      <button className="closeBtn" onClick={handleExit}>
+        დახურვა
+      </button>
     </div>
   );
 }
