@@ -2,7 +2,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
 }
 
 .bundles {
@@ -16,6 +16,8 @@ body {
 
   .loader {
     width: 32px;
+    justify-content: center;
+    align-items: center;
     height: 32px;
     position: relative;
     border-radius: 50%;

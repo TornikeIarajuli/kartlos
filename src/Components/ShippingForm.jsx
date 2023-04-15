@@ -140,10 +140,10 @@ function ShippingForm(props) {
           onChange={(e) => setEmail(e.target.value)}
         />
 
-        <button type="submit">შეკვეთა</button>
+        <button className="orderBtn" type="submit">შეკვეთა</button>
       </form>
 
-      <button onClick={handleExit}>დახურვა</button>
+      <button className="closeBtn" onClick={handleExit}>დახურვა</button>
     </div>
   );
 }
