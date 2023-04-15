@@ -24,7 +24,7 @@ export default function Product(props) {
           onClick={handleClick}
         >შეძენა</button>
         {showForm &&
-          <div className="modal-overlay">
+          <div className="modal-overlay" onClick={handleExit}>
               <ShippingForm onExit={handleExit} />
             </div>
         }
