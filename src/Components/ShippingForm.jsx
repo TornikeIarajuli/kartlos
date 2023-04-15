@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import './shipping.css'
 
 function ShippingForm(props) {
   const [countryId, setCountryId] = useState(0);
@@ -15,7 +16,6 @@ function ShippingForm(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(productId);
 
     const data = {
       addresInfo: {
@@ -58,9 +58,9 @@ function ShippingForm(props) {
   };
 
   return (
-    <div>
+    <div className="shipping-form">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="firstName">First Name:</label>
+        <label htmlFor="firstName">სახელი:</label>
         <input
           type="text"
           id="firstName"
@@ -68,7 +68,7 @@ function ShippingForm(props) {
           onChange={(e) => setFirstName(e.target.value)}
         />
 
-        <label htmlFor="lastName">Last Name:</label>
+        <label htmlFor="lastName">გვარი:</label>
         <input
           type="text"
           id="lastName"
@@ -76,7 +76,7 @@ function ShippingForm(props) {
           onChange={(e) => setLastName(e.target.value)}
         />
 
-        <label htmlFor="address1">Address Line 1:</label>
+        <label htmlFor="address1">მისამართი:</label>
         <input
           type="text"
           id="address1"
@@ -84,7 +84,7 @@ function ShippingForm(props) {
           onChange={(e) => setAddress1(e.target.value)}
         />
 
-        <label htmlFor="address2">Address Line 2:</label>
+        <label htmlFor="address2">მეორე მისამართი:</label>
         <input
           type="text"
           id="address2"
@@ -92,7 +92,7 @@ function ShippingForm(props) {
           onChange={(e) => setAddress2(e.target.value)}
         />
 
-        <label htmlFor="city">City:</label>
+        <label htmlFor="city">ქალაქი:</label>
         <input
           type="text"
           id="city"
@@ -100,7 +100,7 @@ function ShippingForm(props) {
           onChange={(e) => setCity(e.target.value)}
         />
 
-        <label htmlFor="state">State:</label>
+        <label htmlFor="state">რეგიონი:</label>
         <input
           type="text"
           id="state"
@@ -108,7 +108,7 @@ function ShippingForm(props) {
           onChange={(e) => setState(e.target.value)}
         />
 
-        <label htmlFor="postalCode">Postal Code:</label>
+        <label htmlFor="postalCode">საფოსტო კოდი:</label>
         <input
           type="text"
           id="postalCode"
@@ -116,7 +116,7 @@ function ShippingForm(props) {
           onChange={(e) => setPostalCode(e.target.value)}
         />
 
-        <label htmlFor="countryId">Country ID:</label>
+        <label htmlFor="countryId">ქვეყანა:</label>
         <input
           type="text"
           id="countryId"
@@ -124,7 +124,7 @@ function ShippingForm(props) {
           onChange={(e) => setCountryId(e.target.value)}
         />
 
-        <label htmlFor="phone">Phone:</label>
+        <label htmlFor="phone">ნომერი:</label>
         <input
           type="text"
           id="phone"
@@ -132,7 +132,7 @@ function ShippingForm(props) {
           onChange={(e) => setPhone(e.target.value)}
         />
 
-        <label htmlFor="email">Email:</label>
+        <label htmlFor="email">ელ-ფოსტა:</label>
         <input
           type="text"
           id="email"
@@ -140,10 +140,10 @@ function ShippingForm(props) {
           onChange={(e) => setEmail(e.target.value)}
         />
 
-        <button type="submit">Submit</button>
+        <button type="submit">შეკვეთა</button>
       </form>
 
-      <button onClick={handleExit}>Exit</button>
+      <button onClick={handleExit}>დახურვა</button>
     </div>
   );
 }

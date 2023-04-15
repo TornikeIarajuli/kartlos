@@ -1,26 +1,28 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Product from "./Product";
+import './products.css'
 
 function Products() {
   const [products, setProducts] = useState([]);
-  const [selectedProductId, setSelectedProductId] = useState(null);
-  const [showForm, setShowForm] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     axios
       .get("https://kartlos-api.azurewebsites.net/api/products")
-      .then((response) => setProducts(response.data.result))
+      .then((response) => {
+        setProducts(response.data.result);
+        setIsLoading(false);
+      })
       .catch((error) => console.log(error));
   }, []);
 
-  const handleSelectProduct = (id) => {
-    setSelectedProductId(id);
-  };
-
   return (
-    <div>
-      {Array.isArray(products) &&
+    <div className="bundles">
+      {isLoading ? (
+        <div className="loader"/>
+      ) : (
+        Array.isArray(products) &&
         products.map((product) => (
           <div key={product.id}>
             <Product
@@ -28,10 +30,10 @@ function Products() {
               nameGeo={product.nameGeo}
               price={product.price}
               descriptionGeo={product.descriptionGeo}
-              // attachments={product[5].attachments[0].url}
             />
           </div>
-        ))}
+        ))
+      )}
     </div>
   );
 }
