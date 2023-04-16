@@ -1,9 +1,7 @@
 .product-card {
   display: flex;
-  flex-direction: column;
-  margin: 16px;
+  margin: 6px;
   width: 100%;
-  max-width: 300px;
 }
 
 .product-image {
@@ -11,17 +9,19 @@
   height: auto;
   aspect-ratio: 16/9;
   object-fit: cover;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
 }
 
 .product-content {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  padding: 16px;
+  flex-grow: 3;
   background-color: rgba(71, 65, 65, 0.5);
-  /* border: 1px solid #ccc; */
   border-radius: 4px;
   text-align: center;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
 }
 
 p,
