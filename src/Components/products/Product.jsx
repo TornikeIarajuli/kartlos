@@ -25,7 +25,7 @@ export default function Product(props) {
         </button>
         {showForm && (
           <div className="modal-overlay">
-            <ShippingForm onExit={handleExit} />
+            <ShippingForm onExit={handleExit} id={props.id} />
           </div>
         )}
       </div>

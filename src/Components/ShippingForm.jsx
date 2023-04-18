@@ -32,8 +32,7 @@ function ShippingForm(props) {
       },
       orders: [
         {
-          // TODO
-          productId: 4,
+          productId: props.id,
           quantity: 1,
         },
       ],
