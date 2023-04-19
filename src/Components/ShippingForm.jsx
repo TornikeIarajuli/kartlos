@@ -13,6 +13,7 @@ function ShippingForm(props) {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   // const [postalCode, setPostalCode] = useState("");
+  const [redirectUrl, setRedirectUrl] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -44,7 +45,8 @@ function ShippingForm(props) {
     axios
       .post("https://kartlos-api.azurewebsites.net/api/orders", data)
       .then((response) => {
-        console.log(response.data);
+        setRedirectUrl(response.data.redirect);
+        window.location.href = response.data.redirect;
       })
       .catch((error) => {
         console.log(error);
@@ -59,6 +61,7 @@ function ShippingForm(props) {
 
   return (
     <div className="shipping-form">
+      {redirectUrl && <p>Redirecting to {redirectUrl}...</p>}
       <form onSubmit={handleSubmit}>
         <label htmlFor="firstName">სახელი:</label>
         <input

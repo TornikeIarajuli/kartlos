@@ -9,8 +9,8 @@
   height: auto;
   aspect-ratio: 16/9;
   object-fit: cover;
-  border-top-left-radius: 10%;
-  border-top-right-radius: 10%;
+  border-top-left-radius: 7%;
+  border-top-right-radius: 7%;
 }
 
 .product-content {
@@ -20,8 +20,8 @@
   background-color: rgba(71, 65, 65, 0.5);
   border-radius: 4px;
   text-align: center;
-  border-top-left-radius: 10%;
-  border-top-right-radius: 10%;
+  border-top-left-radius: 7%;
+  border-top-right-radius: 7%;
 }
 
 p,
