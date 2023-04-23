@@ -18,8 +18,9 @@ export default function Product(props) {
       <div className="product-content">
         <img className="product-image" src={props.url} alt="Bundle" />
         <h6 className="product-title">{props.nameGeo}</h6>
-        <h4 className="product-price">{props.price + "₾"}</h4>
+        <hr></hr>
         <p className="product-description">{props.descriptionGeo}</p>
+        <h4 className="product-price">{props.price + "₾"}</h4>
         <button className="buy-btn" onClick={handleClick}>
           შეძენა
         </button>

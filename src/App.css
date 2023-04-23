@@ -1,40 +1,40 @@
 @font-face {
-  font-family: 'contractica';
-  src: url('./font/TBCContractica-Regular.ttf') format('truetype');
+  font-family: "contractica";
+  src: url("./font/TBCContractica-Regular.ttf") format("truetype");
 }
 
-
 * {
-  font-family: 'contractica', sans-serif !important;
+  font-family: "contractica", sans-serif !important;
   list-style: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); 
-  z-index: -1;
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hr-left,
+.hr-right {
+  flex-grow: 1;
+  height: 10px;
+  background-color: #143b88;
+  border: none;
+}
+
+.header > img {
+  width: 200px;
+  display: block;
+  margin: 25px auto;
 }
 
 body {
-  background-image: url('./aieti.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 100vh;
+  background-image: url("./resources/aieti.png");
+  /* background-image: url("./resources/background.png"); */
   background-size: cover;
-  background-position: center;
-  overflow-y: scroll;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-body::-webkit-scrollbar {
-  display: none;
+  background-position: center center;
+  background-attachment: fixed;
 }
