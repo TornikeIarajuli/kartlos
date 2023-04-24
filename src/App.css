@@ -20,10 +20,32 @@
 .hr-left,
 .hr-right {
   flex-grow: 1;
-  height: 10px;
-  background-color: #143b88;
+  height: 1px;
+  background-color: #5a7ec5;
   border: none;
+  border: 5px;
 }
+
+/* hr {
+  position: relative;
+  border: none;
+  height: 1px;
+  background-color: #143b88;
+  margin: 20px 0;
+}
+
+hr::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #143b88 transparent;
+} */
 
 .header > img {
   width: 200px;
@@ -32,8 +54,9 @@
 }
 
 body {
-  background-image: url("./resources/aieti.png");
-  /* background-image: url("./resources/background.png"); */
+  /* background-image: url("./resources/aieti.png"); */
+  background-color: #143b88;
+  background-image: url("./resources/background.png");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
