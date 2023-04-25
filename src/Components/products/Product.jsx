@@ -16,18 +16,37 @@ export default function Product(props) {
 	let arr = props.descriptionGeo.split(/• /).slice(1);
 
 	return (
-		<div className="product">
-			<img src={props.url} alt="Bundle" className="product__img" />
-
-			<h5 className="product__name">{props.nameGeo}</h5>
-
-			<div className="product-description">
-				{arr.map((element, index) => {
-					return <p key={index}>• {element}</p>;
-				})}
+		<div className="card">
+			<div className="card__side card__side--front">
+				<img
+					className="card__picture card__picture--1"
+					src={props.url}
+					alt=""
+				/>
+				<h4 className="card__heading">
+					<span className="card__heading-span card__heading-span--1">
+						{props.nameGeo}
+					</span>
+				</h4>
+				<div className="card__details">
+					<ul>
+						{arr.map((element, index) => {
+							return <li key={index}>• {element}</li>;
+						})}
+					</ul>
+				</div>
 			</div>
-
-			<button className="btn product__btn">Contact realtor</button>
+			<div className="card__side card__side--back card__side--back-1">
+				<div className="card__cta">
+					<div className="card__price-box">
+						<p className="card__price-only">Only</p>
+						<p className="card__price-value">$300</p>
+					</div>
+					<a href="#popup" className="btn btn--white">
+						Book now!
+					</a>
+				</div>
+			</div>
 		</div>
 	);
 }
