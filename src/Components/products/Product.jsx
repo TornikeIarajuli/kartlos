@@ -39,12 +39,9 @@ export default function Product(props) {
 			<div className="card__side card__side--back card__side--back-1">
 				<div className="card__cta">
 					<div className="card__price-box">
-						<p className="card__price-only">Only</p>
-						<p className="card__price-value">$300</p>
+						<p className="card__price-value">{props.price + "₾"}</p>
 					</div>
-					<a href="#popup" className="btn btn--white">
-						Book now!
-					</a>
+					<a className="btn btn--white">ყიდვა</a>
 				</div>
 			</div>
 		</div>

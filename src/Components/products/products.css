@@ -1,7 +1,8 @@
 .products {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	gap: 1rem;
 	margin: 1rem 1rem;
+	width: 100%;
+	grid-column: center-start / center-end;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	grid-gap: 3rem;
 }

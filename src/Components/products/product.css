@@ -6,6 +6,12 @@
 	align-items: center;
 	width: 20rem;
 }
+
+@media only screen and (max-width: 760px) {
+	.card {
+		margin: 0 auto;
+	}
+}
 .product__img {
 	width: 100%;
 	z-index: 1;
@@ -26,9 +32,9 @@
 }
 
 .btn {
-	background-color: #c69963;
 	color: #fff;
 	border: none;
+	width: 10rem;
 	border-radius: 0;
 	font-family: "Josefin Sans", sans-serif;
 	font-size: 1.5rem;
@@ -36,10 +42,9 @@
 	padding: 1.8rem 3rem;
 	cursor: pointer;
 	transition: all 0.2s;
-	width: 100%;
 }
 .btn:hover {
-	background-color: #b28451;
+	background-color: white;
 }
 
 .card {
@@ -70,13 +75,8 @@
 .card__side--back {
 	transform: rotateY(180deg);
 }
+
 .card__side--back-1 {
-	background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
-}
-.card__side--back-2 {
-	background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
-}
-.card__side--back-3 {
 	background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
 }
 .card:hover .card__side--front {
@@ -96,18 +96,7 @@
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
 }
-/* .card__picture--1 {
-	background-image: linear-gradient(to right bottom, #ffb900, #ff7730),
-		url("../img/nat-5.jpg");
-}
-.card__picture--2 {
-	background-image: linear-gradient(to right bottom, #7ed56f, #28b485),
-		url("../img/nat-6.jpg");
-}
-.card__picture--3 {
-	background-image: linear-gradient(to right bottom, #2998ff, #5643fa),
-		url("../img/nat-7.jpg");
-} */
+
 .card__heading {
 	font-size: 1rem;
 	font-weight: 300;
@@ -124,21 +113,8 @@
 	-webkit-box-decoration-break: clone;
 	box-decoration-break: clone;
 }
+
 .card__heading-span--1 {
-	background-image: linear-gradient(
-		to right bottom,
-		rgba(255, 185, 0, 0.85),
-		rgba(255, 119, 48, 0.85)
-	);
-}
-.card__heading-span--2 {
-	background-image: linear-gradient(
-		to right bottom,
-		rgba(126, 213, 111, 0.85),
-		rgba(40, 180, 133, 0.85)
-	);
-}
-.card__heading-span--3 {
 	background-image: linear-gradient(
 		to right bottom,
 		rgba(41, 152, 255, 0.85),
@@ -163,7 +139,7 @@
 }
 .card__cta {
 	position: absolute;
-	top: 30%;
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 90%;
@@ -172,7 +148,7 @@
 .card__price-box {
 	text-align: center;
 	color: #fff;
-	margin-bottom: 8rem;
+	margin-bottom: 3rem;
 }
 .card__price-only {
 	font-size: 1.4rem;
