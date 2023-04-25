@@ -24,15 +24,14 @@ function Products() {
 			) : (
 				Array.isArray(products) &&
 				products.map((product) => (
-					<div key={product.id}>
-						<Product
-							id={product.id}
-							url={product.attachments[0].url}
-							nameGeo={product.nameGeo}
-							price={product.price}
-							descriptionGeo={product.descriptionGeo}
-						/>
-					</div>
+					<Product
+						key={product.id}
+						id={product.id}
+						url={product.attachments[0].url}
+						nameGeo={product.nameGeo}
+						price={product.price}
+						descriptionGeo={product.descriptionGeo}
+					/>
 				))
 			)}
 		</section>

@@ -1,5 +1,5 @@
 .products {
-	margin: 1rem 1rem;
+	margin: 2rem;
 	width: 100%;
 	grid-column: center-start / center-end;
 	display: grid;
