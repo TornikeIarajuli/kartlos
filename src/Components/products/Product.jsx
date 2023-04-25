@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ShippingForm from "../ShippingForm";
+
 import "./product.css";
 
 export default function Product(props) {
@@ -16,19 +16,19 @@ export default function Product(props) {
 	let arr = props.descriptionGeo.split(/• /).slice(1);
 
 	return (
-		<div className="card">
-			<div className="card__side card__side--front">
+		<div className="product">
+			<div className="product__side product__side--front">
 				<img
-					className="card__picture card__picture--1"
+					className="product__picture product__picture--1"
 					src={props.url}
 					alt=""
 				/>
-				<h4 className="card__heading">
-					<span className="card__heading-span card__heading-span--1">
+				<h4 className="product__heading">
+					<span className="product__heading-span product__heading-span--1">
 						{props.nameGeo}
 					</span>
 				</h4>
-				<div className="card__details">
+				<div className="product__details">
 					<ul>
 						{arr.map((element, index) => {
 							return <li key={index}>• {element}</li>;
@@ -36,10 +36,10 @@ export default function Product(props) {
 					</ul>
 				</div>
 			</div>
-			<div className="card__side card__side--back card__side--back-1">
-				<div className="card__cta">
-					<div className="card__price-box">
-						<p className="card__price-value">{props.price + "₾"}</p>
+			<div className="product__side product__side--back product__side--back-1">
+				<div className="product__cta">
+					<div className="product__price-box">
+						<p className="product__price-value">{props.price + "₾"}</p>
 					</div>
 					<a className="btn btn--white">ყიდვა</a>
 				</div>

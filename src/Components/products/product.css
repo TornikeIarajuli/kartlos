@@ -1,11 +1,11 @@
-.card {
+.product {
 	perspective: 150rem;
 	-moz-perspective: 150rem;
 	position: relative;
 	height: 35rem;
 	width: 20rem;
 }
-.card__side {
+.product__side {
 	height: 52rem;
 	transition: all 0.8s;
 	position: absolute;
@@ -20,23 +20,23 @@
 
 	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
-.card__side--front {
+.product__side--front {
 	background-color: #fff;
 }
-.card__side--back {
+.product__side--back {
 	transform: rotateY(180deg);
 }
 
-.card__side--back-1 {
+.product__side--back-1 {
 	background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
 }
-.card:hover .card__side--front {
+.product:hover .product__side--front {
 	transform: rotateY(-180deg);
 }
-.card:hover .card__side--back {
+.product:hover .product__side--back {
 	transform: rotateY(0);
 }
-.card__picture {
+.product__picture {
 	width: 100%;
 
 	background-size: cover;
@@ -48,7 +48,7 @@
 	border-top-right-radius: 3px;
 }
 
-.card__heading {
+.product__heading {
 	font-size: 1rem;
 	font-weight: 300;
 	text-transform: uppercase;
@@ -59,36 +59,36 @@
 	right: 2rem;
 	width: 75%;
 }
-.card__heading-span {
+.product__heading-span {
 	padding: 1rem 1.5rem;
 	-webkit-box-decoration-break: clone;
 	box-decoration-break: clone;
 }
 
-.card__heading-span--1 {
+.product__heading-span--1 {
 	background-image: linear-gradient(
 		to right bottom,
 		rgba(41, 152, 255, 0.85),
 		rgba(86, 67, 250, 0.85)
 	);
 }
-.card__details {
+.product__details {
 	padding: 1rem;
 }
-.card__details ul {
+.product__details ul {
 	list-style: none;
 	width: 80%;
 	margin: 0 auto;
 }
-.card__details ul li {
+.product__details ul li {
 	text-align: center;
 	font-size: 0.8rem;
 	padding: 1rem;
 }
-.card__details ul li:not(:last-child) {
+.product__details ul li:not(:last-child) {
 	border-bottom: 1px solid #eee;
 }
-.card__cta {
+.product__cta {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -96,16 +96,16 @@
 	width: 90%;
 	text-align: center;
 }
-.card__price-box {
+.product__price-box {
 	text-align: center;
 	color: #fff;
 	margin-bottom: 3rem;
 }
-.card__price-only {
+.product__price-only {
 	font-size: 1.4rem;
 	text-transform: uppercase;
 }
-.card__price-value {
+.product__price-value {
 	font-size: 1.6rem;
 	font-weight: 100;
 }
@@ -201,7 +201,7 @@
 	transform: translateY(0);
 }
 @media only screen and (max-width: 760px) {
-	.card {
+	.product {
 		margin: 0 auto;
 	}
 }
