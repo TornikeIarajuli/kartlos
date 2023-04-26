@@ -1,29 +1,29 @@
 @font-face {
-  font-family: "contractica";
-  src: url("./font/TBCContractica-Regular.ttf") format("truetype");
+	font-family: "contractica";
+	src: url("./font/TBCContractica-Regular.ttf") format("truetype");
 }
 
 * {
-  font-family: "contractica", sans-serif !important;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	font-family: "contractica", sans-serif !important;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 .header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .hr-left,
 .hr-right {
-  flex-grow: 1;
-  height: 1px;
-  background-color: #5a7ec5;
-  border: none;
-  border: 5px;
+	flex-grow: 1;
+	height: 1px;
+	background-color: #5a7ec5;
+	border: none;
+	border: 5px;
 }
 
 /* hr {
@@ -48,16 +48,16 @@ hr::before {
 } */
 
 .header > img {
-  width: 200px;
-  display: block;
-  margin: 25px auto;
+	width: 200px;
+	display: block;
+	margin: 25px auto;
 }
 
 body {
-  /* background-image: url("./resources/aieti.png"); */
-  background-color: #143b88;
-  background-image: url("./resources/background.png");
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
+	/* background-image: url("./resources/aieti.png"); */
+	background-color: #143b88;
+	/* background-image: url("./resources/background.png"); */
+	/* background-size: cover;
+	background-position: center center;
+	background-attachment: fixed; */
 }

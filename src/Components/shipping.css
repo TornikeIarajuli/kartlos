@@ -1,87 +1,95 @@
-.shipping-form {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  max-width: 500px;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
-  background-color: #143b88;
-  z-index: 10;
-  overflow: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .exit_button {
-  position: inherit;
-  top: 0;
-  right: 4%;
-  font-size: 3rem;
-  color: white;
-  font-weight: 100;
-  cursor: pointer;
+	position: inherit;
+	top: 0;
+	right: 4%;
+	font-size: 3rem;
+	color: white;
+	font-weight: 100;
+	cursor: pointer;
 }
 
 h3 {
-  color: white;
-  font-size: 2rem;
-  font-weight: 100;
-  margin-bottom: 15px;
+	color: white;
+	font-size: 2rem;
+	font-weight: 100;
+	margin: 2rem;
+	text-align: center;
 }
 
 label {
-  font-size: 1rem;
-  margin-bottom: 10px;
-  color: white;
+	font-size: 1rem;
+	margin-bottom: 10px;
+	color: white;
 }
 
 input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-bottom: 1px solid #fafafa;
-  font-size: 16px;
-  margin-bottom: 20px;
-  background-color: #143b88;
+	width: 100%;
+	padding: 10px;
+	border: none;
+	border-bottom: 1px solid #fafafa;
+	font-size: 16px;
+	margin-bottom: 20px;
+	background-color: #143b88;
 }
 
 input[type="text"]:focus {
-  outline: none;
-  border-color: #2196f3;
-  color: white;
+	outline: none;
+	border-color: #2196f3;
+	color: white;
 }
 
 button[type="submit"] {
-  background-color: #07132d;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  padding: 20px;
-  font-size: 1.25rem;
-  font-weight: 400;
-  cursor: pointer;
-  margin-top: 20px;
-  width: 100%;
+	background-color: #07132d;
+	color: #ffffff;
+	border: none;
+	border-radius: 5px;
+	padding: 20px;
+	font-size: 1.25rem;
+	font-weight: 400;
+	cursor: pointer;
+	margin-top: 20px;
+	width: 100%;
 }
 
 button[type="submit"]:hover {
-  background-color: #061d50;
+	background-color: #061d50;
 }
 
 .closeBtn,
 .orderBtn {
-  background-color: transparent;
-  border: none;
-  color: #9e9e9e;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 20px;
+	background-color: transparent;
+	border: none;
+	color: #9e9e9e;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 20px;
 }
 
 .closeBtn:hover {
-  color: #2196f3;
+	color: #2196f3;
+}
+
+.popup {
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 3000;
+	transition: all 0.3s;
+}
+@supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+	.popup {
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+}
+
+form {
+	width: 50%;
+	margin: 0 auto;
+	padding: 1rem;
+	background-color: rgb(33, 70, 57);
 }
