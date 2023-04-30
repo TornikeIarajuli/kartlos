@@ -1,9 +1,6 @@
 import "./App.css";
 import Products from "./Components/products/Products";
 import Logo from "./resources/logo.png";
-import ShippingForm from "./Components/ShippingForm";
-
-const showForm = false;
 
 function App() {
   return (
@@ -16,8 +13,6 @@ function App() {
       <div className="container">
         <Products />
       </div>
-
-      {/* {showForm && <ShippingForm />} */}
     </div>
   );
 }
