@@ -10,9 +10,12 @@ function App() {
         <img src={Logo} alt="Logo" />
         <hr className="hr-right"></hr>
       </div>
-      <Products />
+      <div className="container">
+        <Products />
+      </div>
     </div>
   );
 }
+
 
 export default App;

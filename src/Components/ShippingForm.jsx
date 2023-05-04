@@ -52,7 +52,7 @@ function ShippingForm(props) {
         console.log(error);
       });
 
-    props.onExit();
+    // props.onExit();
   };
 
   const handleExit = () => {
@@ -60,9 +60,14 @@ function ShippingForm(props) {
   };
 
   return (
-    <div className="shipping-form">
+    <div className="popup">
+      <h3>შეკვეთა</h3>
+      <div className="exit_button" onClick={handleExit}>
+        {" "}
+        {"\u{2BBE}"}
+      </div>
       {redirectUrl && <p>Redirecting to {redirectUrl}...</p>}
-      <form onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <label htmlFor="firstName">სახელი:</label>
         <input
           type="text"
@@ -144,13 +149,13 @@ function ShippingForm(props) {
         />
 
         <button className="orderBtn" type="submit">
-          შეკვეთა
+          გაგრძელება
         </button>
       </form>
 
-      <button className="closeBtn" onClick={handleExit}>
+      {/* <button className="closeBtn" onClick={handleExit}>
         დახურვა
-      </button>
+      </button> */}
     </div>
   );
 }

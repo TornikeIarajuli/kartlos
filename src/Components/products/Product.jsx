@@ -1,6 +1,7 @@
 import { useState } from "react";
-import ShippingForm from "../ShippingForm";
+
 import "./product.css";
+import ShippingForm from "../ShippingForm";
 
 export default function Product(props) {
   const [showForm, setShowForm] = useState(false);
@@ -13,23 +14,44 @@ export default function Product(props) {
     setShowForm(false);
   };
 
+  let arr = props.descriptionGeo.split(/• /).slice(1);
+
   return (
-    <div className="product-card">
-      <div className="product-content">
-        <img className="product-image" src={props.url} alt="Bundle" />
-        <h6 className="product-title">{props.nameGeo}</h6>
-        <hr></hr>
-        <p className="product-description">{props.descriptionGeo}</p>
-        <h4 className="product-price">{props.price + "₾"}</h4>
-        <button className="buy-btn" onClick={handleClick}>
-          შეძენა
-        </button>
-        {showForm && (
-          <div className="modal-overlay">
-            <ShippingForm onExit={handleExit} id={props.id} />
-          </div>
-        )}
+    <div className="product">
+      <div className="product__side product__side--front">
+        <img
+          className="product__picture product__picture--1"
+          src={props.url}
+          alt=""
+        />
+        <h4 className="product__heading">
+          <span className="product__heading-span product__heading-span--1">
+            {props.nameGeo}
+          </span>
+        </h4>
+        <div className="product__details">
+          <ul>
+            {arr.map((element, index) => {
+              return <li key={index}>• {element}</li>;
+            })}
+          </ul>
+        </div>
       </div>
+      <div className="product__side product__side--back product__side--back-1">
+        <div className="product__cta">
+          <div className="product__price-box">
+            <p className="product__price-value">{props.price + "₾"}</p>
+          </div>
+          <button className="btn btn--white" onClick={handleClick}>
+            ყიდვა
+          </button>
+        </div>
+      </div>
+      {showForm && (
+        <div className="modal-overlay">
+          <ShippingForm onExit={handleExit} id={props.id} />
+        </div>
+      )}
     </div>
   );
 }
