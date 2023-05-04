@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-// import axios from "axios";
+import axios from "axios";
 import "./shipping.css";
-
-const axios = require("axios");
 
 function ShippingForm(props) {
   // const [countryId, setCountryId] = useState(0);
