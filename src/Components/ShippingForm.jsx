@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import axios from "axios";
 import "./shipping.css";
 
 function ShippingForm(props) {
@@ -42,17 +41,26 @@ function ShippingForm(props) {
       currencyId: 1,
     };
 
-    axios
-      .post("https://kartlos-api.azurewebsites.net/api/orders", data)
+    fetch("https://kartlos-api.azurewebsites.net/api/orders", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
       .then((response) => {
-        setRedirectUrl(response.data.redirect);
-        window.location.href = response.data.redirect;
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setRedirectUrl(data.redirect);
+        window.location.href = data.redirect;
       })
       .catch((error) => {
         console.log(error);
       });
-
-    // props.onExit();
   };
 
   const handleExit = () => {

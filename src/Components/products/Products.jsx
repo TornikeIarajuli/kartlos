@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import Product from "./Product";
 import "./products.css";
 
@@ -8,10 +7,15 @@ function Products() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    axios
-      .get("https://kartlos-api.azurewebsites.net/api/products")
+    fetch("https://kartlos-api.azurewebsites.net/api/products")
       .then((response) => {
-        setProducts(response.data.result);
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setProducts(data.result);
         setIsLoading(false);
       })
       .catch((error) => console.log(error));
