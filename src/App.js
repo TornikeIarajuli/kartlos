@@ -1,5 +1,5 @@
 import "./App.css";
-import Products from "./Components/products/Products";
+import Products from "./Components/Products";
 import Logo from "./resources/logo.png";
 
 function App() {
@@ -16,6 +16,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;
