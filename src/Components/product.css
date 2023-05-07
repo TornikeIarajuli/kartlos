@@ -1,7 +1,6 @@
 .product {
   perspective: 150rem;
   -moz-perspective: 150rem;
-  position: relative;
   margin: 0 auto;
   height: 35rem;
   width: 20rem;

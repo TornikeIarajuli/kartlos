@@ -54,7 +54,6 @@ hr::before {
 }
 
 body {
-  /* background-image: url("./resources/aieti.png"); */
   background-color: #143b88;
   background-image: url("./resources/background.png");
   z-index: 1;

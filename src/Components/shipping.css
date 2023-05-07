@@ -71,9 +71,7 @@ button[type="submit"]:hover {
 
 .popup {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
   background-color: #143b88;
   width: 30vw;
   z-index: 3000;

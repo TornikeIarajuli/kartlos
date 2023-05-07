@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./shipping.css";
 
 function ShippingForm(props) {
@@ -9,6 +9,29 @@ function ShippingForm(props) {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [redirectUrl, setRedirectUrl] = useState("");
+
+  useEffect(() => {
+    const popup = document.getElementsByClassName("popup");
+
+    Array.from(popup).forEach((e) => {
+      const width = e.offsetWidth;
+      const screenWidth = window.innerWidth;
+
+      const res = (screenWidth - width) / 2;
+
+      e.style.left = res + `px`;
+
+      console.log(res);
+    });
+    // const width = popup.offsetWidth;
+    // const screenWidth = window.innerWidth;
+
+    // const res = (screenWidth - width) / 2;
+
+    // popup.style.left = res + `px`;
+
+    // console.log(res);
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
