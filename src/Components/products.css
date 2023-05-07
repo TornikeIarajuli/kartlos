@@ -7,3 +7,9 @@
 	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 	grid-gap: 3rem;
 }
+
+.modal-overlay {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
